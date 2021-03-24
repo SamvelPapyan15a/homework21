@@ -1,0 +1,26 @@
+[
+  {
+    "first_name": "Samvel",
+    "last_name": "Papyan",
+    "email": "samuel.papyan15a@gmail.com",
+    "age": 18
+  },
+  {
+    "first_name": "Narek",
+    "last_name": "Hovhannisyan",
+    "email": "narek.hovhan@ok.ru",
+    "age": 20
+  },
+  {
+    "first_name": "David",
+    "last_name": "Avagyan",
+    "email": "david.avagyan@mail.ru",
+    "age": 19
+  },
+  {
+    "first_name": "Mkrtich",
+    "last_name": "Hakobyan",
+    "email": "mkrtich.hakobyan@gmail.com",
+    "age": 20
+  }
+]

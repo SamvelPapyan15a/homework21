@@ -1,13 +1,22 @@
 //4․ Ստեղծել myMap մեթոդ Array-ի համարար , որը կաշխատի ինչպես map մեթոդը. [].map(fn) -ը կարողանանք գրել [].myMap(fn) -ի միջոցով ։
 
-Array.prototype.myMap = function(fn){
-    const newArr = [];
-    for(let item of this){
-        newArr.push(fn(item));
-    }
-    return newArr;
-}
+Object.defineProperty(Array.prototype,'myMap', {
+    value:function(fn){
+        const newArr = [];
+        for(let i in this){
+            newArr.push(fn(this[i],i));
+        }
+        return newArr;
+    },
+    enumerable:false
+});
 
-console.log([1,2,3,4].myMap(function(value){
-    return (value % 2 == 0) ? value*value : (value+1)*2;
+console.log([1,2,3,4].myMap(()=>{
+    return "Hello";
+}));
+console.log([1,2,3,4].myMap((value)=>{
+    return value + 1;
+}));
+console.log([1,2,3,4].myMap((value, index)=>{
+    return value * index;
 }));
